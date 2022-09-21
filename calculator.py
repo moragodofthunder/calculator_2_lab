@@ -9,5 +9,8 @@ token = user_input.split(" ")
 if token[0] == "+":
     print(add(int(token[1]), int(token[2])))
 
+elif token[0] == "-":
+    print(subtract(int(token[1]), int(token[2])))
+
 
 # Replace this with your code
