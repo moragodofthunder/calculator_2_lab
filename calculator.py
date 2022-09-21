@@ -15,5 +15,9 @@ elif token[0] == "-":
 elif token[0] == "*":
     print(multiply(int(token[1]), int(token[2])))
 
+elif token[0] == "/":
+    print(divide(int(token[1]), int(token[2])))
+
+
 
 # Replace this with your code
