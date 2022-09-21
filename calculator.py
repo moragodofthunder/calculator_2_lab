@@ -24,6 +24,8 @@ elif token[0] == "cube":
 elif token[0] == "square":
     print(square(int(token[1]), int(token[2])))
 
+elif token[0] == "power":
+    print(power(int(token[1]), int(token[2])))
 
 
 # Replace this with your code
