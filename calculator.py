@@ -27,5 +27,5 @@ elif token[0] == "square":
 elif token[0] == "power":
     print(power(int(token[1]), int(token[2])))
 
-
-# Replace this with your code
+elif token[0] == "modulo":
+    print(mod(int(token[1]), int(token[2])))
