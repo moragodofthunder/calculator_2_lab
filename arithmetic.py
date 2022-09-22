@@ -1,22 +1,24 @@
 """Functions for common math operations."""
 
+from functools import reduce
 
-def add(num1, num2):
+def add(numbers):
     """Return the sum of num1 + num2."""
+    numbers.pop(-1)
+    numbers_int = [int(number) for number in numbers]
+    return reduce(lambda x, y: x+y, numbers_int)
 
-    return num1 + num2
+def multiply(numbers):
+    """Multiply the num1 by num2 and return the result."""
+    numbers.pop(-1)
+    numbers_int = [int(number) for number in numbers]
+    return reduce(lambda x, y: x*y, numbers_int)
 
 
 def subtract(num1, num2):
     """Return the value of num1 minus num2."""
 
     return num1 - num2
-
-
-def multiply(num1, num2):
-    """Multiply the num1 by num2 and return the result."""
-
-    return num1 * num2
 
 
 def divide(num1, num2):

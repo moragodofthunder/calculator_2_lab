@@ -20,16 +20,19 @@ for equations in open(numbers):
     # token[1] is the operator, aka the first character typed by the user
     # token[0] and token[2] are the first and second numbers the user chooses 
     # for the calculation
-    if token[1] == "+":
-        answer = ((add(float(token[0]), float(token[2]))))
+
+    if token[-1] == "+":
+        answer = ((add(token)))
+        answer = float(answer)
+        print(f"{answer:.3f}")
+
+    elif token[-1] == "*":
+        answer = ((multiply(token)))
+        answer = float(answer)
         print(f"{answer:.3f}")
 
     elif token[1] == "-":
         answer = (subtract(float(token[0]), float(token[2])))
-        print(f"{answer:.3f}")
-
-    elif token[1] == "*":
-        answer = (multiply(float(token[0]), float(token[2])))
         print(f"{answer:.3f}")
 
     elif token[1] == "/":
