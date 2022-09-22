@@ -3,11 +3,16 @@
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
-while True:
-    # This takes in the calculation from the user
-    user_input = input("What do you want to calculate?: ")
+# while True:
+#     # This takes in the calculation from the user
+#     user_input = input("What do you want to calculate?: ")
+
+import sys
+
+numbers = sys.argv[1]
+for equations in open(numbers):
     # This sets the input as a list, called token
-    token = user_input.split(" ")
+    token = equations.split(" ")
 
     # token[0] is the operator, aka the first character typed by the user
     # token[1] and token[2] are the first and second numbers the user chooses 
@@ -52,9 +57,3 @@ while True:
     # This will work the user about invalid input
     else:
         print("Sorry, that's invalid")
-
-# import sys
-
-# numbers = sys.argv[1]
-# for equations in open(numbers):
-#     print(power(int(token[1]), int(token[2])))
