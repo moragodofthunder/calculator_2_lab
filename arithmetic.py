@@ -2,16 +2,31 @@
 
 from functools import reduce
 
-def add(numbers):
+def add(num1, num2):
     """Return the sum of num1 + num2."""
-    numbers.pop(-1)
+    
+    return num1 - num2
+
+def add_unlimited(numbers):
+    """Returns the sum of all numbers"""
+
+    numbers.pop(0)
     numbers_int = [int(number) for number in numbers]
+
     return reduce(lambda x, y: x+y, numbers_int)
 
-def multiply(numbers):
+def multiply(num1, num2):
     """Multiply the num1 by num2 and return the result."""
-    numbers.pop(-1)
+
+    return num1 * num2
+    
+
+def multiply_unlimited(numbers):
+    """Returns the sum of all numbers"""
+
+    numbers.pop(0)
     numbers_int = [int(number) for number in numbers]
+
     return reduce(lambda x, y: x*y, numbers_int)
 
 
