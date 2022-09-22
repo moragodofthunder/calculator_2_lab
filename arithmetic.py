@@ -2,38 +2,29 @@
 
 from functools import reduce
 
-def add(num1, num2):
-    """Return the sum of num1 + num2."""
-    
-    return num1 - num2
 
-def add_unlimited(numbers):
+def add(numbers):
     """Returns the sum of all numbers"""
 
-    numbers.pop(0)
+    numbers.pop(1)
     numbers_int = [int(number) for number in numbers]
 
     return reduce(lambda x, y: x+y, numbers_int)
-
-def multiply(num1, num2):
-    """Multiply the num1 by num2 and return the result."""
-
-    return num1 * num2
-    
-
-def multiply_unlimited(numbers):
-    """Returns the sum of all numbers"""
-
-    numbers.pop(0)
-    numbers_int = [int(number) for number in numbers]
-
-    return reduce(lambda x, y: x*y, numbers_int)
 
 
 def subtract(num1, num2):
     """Return the value of num1 minus num2."""
 
     return num1 - num2
+
+
+def multiply(numbers):
+    """Returns the product of all numbers"""
+
+    numbers.pop(1)
+    numbers_int = [int(number) for number in numbers]
+
+    return reduce(lambda x, y: x*y, numbers_int)
 
 
 def divide(num1, num2):
@@ -57,7 +48,7 @@ def cube(num1):
 def power(num1, num2):
     """Raise num1 to the power of num2 and return the value."""
 
-    return num1 ** num2  # ** = exponent operator
+    return num1 ** num2  
 
 
 def mod(num1, num2):
