@@ -3,13 +3,16 @@
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
-# while True:
-#     # This takes in the calculation from the user
-#     user_input = input("What do you want to calculate?: ")
+#Previous while True loop that asks for user input:
+    # while True:
+    #     # This takes in the calculation from the user
+    #     user_input = input("What do you want to calculate?: ")
 
 import sys
 
 numbers = sys.argv[1]
+
+# For loop that uses number.txt file:
 for equations in open(numbers):
     # This sets the input as a list, called token
     token = equations.split(" ")
